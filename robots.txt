@@ -1,12 +1,22 @@
-# Allow all web crawlers
-User-agent: *
-Allow: /
-
 # Sitemap location
-Sitemap: https://www.greglturnquist.com/sitemap-index.xml
+Sitemap: https://www.gregturnquist.com/sitemap-index.xml
 
+# Block AI and unwanted bots
 User-agent: GPTBot
 Disallow: /
 
 User-agent: ChatGPT-User
 Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# General rules for all other bots
+User-agent: *
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /api/
+Allow: /
